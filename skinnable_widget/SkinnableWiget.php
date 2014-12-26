@@ -49,12 +49,12 @@ class SkinnableWidget extends WP_Widget {
 		//output the form as html
 		?>
     <p>
-		  <label for="<?php echo $this->get_field_id('title'); ?>">Title: </label>
-		  <input type="text" class="widefat" id="<?php echo $this->get_field_id('title');?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title;?>" />
+		  <label for="<?php echo esc_attr( $this->get_field_id('title') ); ?>">Title: </label>
+		  <input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') );?>" name="<?php echo esc_attr( $this->get_field_name('title' ); ?>" value="<?php echo esc_attr( $title );?>" />
 		</p>
 		<p>
-		  <label for="<?php echo $this->get_field_id('message'); ?>">Message:</label>
-		  <textarea class="widefat" id="<?php echo $this->get_field_id('message');?>" name="<?php echo $this->get_field_name('message');?>"><?php echo $message;?></textarea>
+		  <label for="<?php echo esc_attr( $this->get_field_id('message') ); ?>">Message:</label>
+		  <textarea class="widefat" id="<?php echo  esc_attr( $this->get_field_id('message') );?>" name="<?php echo  esc_attr( $this->get_field_name('message') );?>"><?php echo esc_textarea( $message );?></textarea>
     </p>
 		<?php 
 	}
